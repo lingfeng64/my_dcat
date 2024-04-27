@@ -15,9 +15,9 @@ void main(List<String> arguments) {
   dcat(paths, showLineNumbers: argResults[lineNumber] as bool);
 }
 
-Future<void> dcat(List<String> paths, {bool showLineNumbers = true}) async {
+Future<void> dcat(List<String> paths, {bool showLineNumbers = false}) async {
   if (paths.isEmpty) {
-    // No files provided as arguments. Read from stdin and print each line.
+   
     await stdin.pipe(stdout);
   } else {
     for (final path in paths) {
